@@ -5,6 +5,7 @@ interface CardProps {
   description: string;
   URL: string;
   gitHubLink: string;
+  toolsUsed: string[];
 }
 
 const ProjectCard = ({
@@ -14,7 +15,16 @@ const ProjectCard = ({
   description,
   URL,
   gitHubLink,
+  toolsUsed,
 }: CardProps) => {
+  const toolList = toolsUsed.map((tool) => {
+    return (
+      <li key={tool}>
+        <img className="tool-logo" src={tool} alt="tool logo" />
+      </li>
+    );
+  });
+
   return (
     <div className={`card ${className}`}>
       <div className="card-header">
@@ -25,7 +35,10 @@ const ProjectCard = ({
       </div>
       <div className="card-body">
         <p>{description}</p>
-        <a href={gitHubLink}>Link to repository</a>
+        <div className="card-footer">
+          <a href={gitHubLink}>View on GitHub</a>
+          <ul className="tool-list">{toolList}</ul>
+        </div>
       </div>
     </div>
   );
