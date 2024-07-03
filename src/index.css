@@ -59,6 +59,7 @@ a {
   box-shadow: 0 1px 4px #afafaf;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 .header-list {
@@ -152,19 +153,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 4rem;
 }
 
 .projects-section-title {
   font-size: 3rem;
   color: rgb(61, 67, 84);
-  padding-top: 2rem;
+  padding-block: 2rem;
   margin-bottom: 3rem;
-}
-
-.projects-section > p {
-  max-width: 25rem;
-  margin-bottom: 3rem;
-  font-weight: 500;
 }
 
 .card {
@@ -282,13 +278,13 @@ a {
   font-size: 3rem;
   color: rgb(61, 67, 84);
   padding-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .contact-list {
   padding-block: 1rem;
   list-style: none;
-  width: 60%;
+  width: 90%;
   padding: 0;
   margin: 0;
 }
@@ -300,7 +296,6 @@ a {
 
 .contact-list > li:hover {
   background-color: rgb(230, 230, 230);
-  
 }
 
 .contact-link {
@@ -311,4 +306,23 @@ a {
 
 .contact-icon {
   height: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 20rem;
+  }
+
+  .tool-logo {
+    height: 1.2rem;
+  }
+
+  .header-list {
+    gap: 2rem;
+  }
+
+  .about-section > p {
+    width: 20rem;
+  }
+
 }

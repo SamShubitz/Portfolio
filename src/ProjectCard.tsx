@@ -28,7 +28,7 @@ const ProjectCard = ({
   return (
     <div className={`card ${className}`}>
       <div className="card-header">
-        <a href={`/${URL}`}>
+        <a href={`/${URL}`} target="_blank">
           <h1>{name}</h1>
           <img className="app-logo" src={image} alt="app-logo" />
         </a>
