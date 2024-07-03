@@ -302,6 +302,18 @@ a {
   display: flex;
   align-items: center;
   gap: .5rem;
+  width: 3.5rem;
+}
+
+.contact-link-section {
+  display: flex;
+}
+
+.contact-link-section {
+  display: flex;
+  gap: 3rem;
+  font-weight: 300;
+  font-size: .8rem;
 }
 
 .contact-icon {
