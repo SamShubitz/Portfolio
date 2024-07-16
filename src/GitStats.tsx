@@ -60,14 +60,18 @@ const GitStats = () => {
     
     const displayData = calculateDisplayData();
 
-
+    const pieStyle = {fontFamily: "Avenir", width: '300px', height: '300px',
+        fontWeight: "bold", paddingInline: "2rem", paddingBlock: "1rem",
+        borderBottomRightRadius: "6px", borderBottom: "6px solid rgb(61, 67, 84)",
+        paddingBottom: "4rem"}
 
     return (
         <div className="langs-used-section">
-            <h1>Languages used</h1>
+            <h1>Languages</h1>
             <PieChart
             animate={true}
-            style={{fontFamily: "Avenir", width: '300px', height: '300px', fontWeight: "bold", paddingInline: "1rem", paddingBlock: "1rem", borderBottomRightRadius: "6px", borderBottom: "5px solid rgb(61, 67, 84)", paddingBottom: "4rem"}}
+            animationDuration={600}
+            style={pieStyle}
             lineWidth={25}
             label={({ x, y, dx, dy, dataEntry }) => (
                 <text
