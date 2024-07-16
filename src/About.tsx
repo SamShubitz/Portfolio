@@ -1,3 +1,5 @@
+import GitStats from "./GitStats";
+
 const About = () => {
   return (
     <div className="about-section" id="about">
@@ -11,6 +13,7 @@ const About = () => {
         position where I can continue to sharpen my skills as a developer while
         also having the privilege of working with and learning from others.
       </p>
+      <GitStats/>
     </div>
   );
 };
