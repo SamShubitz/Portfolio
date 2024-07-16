@@ -7,12 +7,13 @@ import postgresql from "./assets/postgresql.svg";
 import react from "./assets/React.svg";
 import reactrouter from "./assets/reactrouter.svg";
 import typescript from "./assets/Typescript.svg"
+import javascript from "./assets/JS.svg";
 import ToolCard from "./ToolCard";
 
 const tools = [{name: "React", image: react},{name: "TypeScript", image: typescript},
     {name: "CSS", image: CSS},{name: ".Net Core", image: netcore},{name: "EF Core", image: efcore},
-    {name: "PostgreSql", image: postgresql},{name: "Axios", image: axios},{name: "React Query", image: reactquery},
-    {name: "React router", image: reactrouter}
+    {name: "Postgres", image: postgresql},{name: "Axios", image: axios},{name: "React Query", image: reactquery},
+    {name: "React router", image: reactrouter},{name: "JavaScript", image: javascript}
 ]
 
 const toolCards = tools.map((tool) => {
@@ -26,7 +27,7 @@ const toolCards = tools.map((tool) => {
 const ToolsUsed = () => {
     return (
         <div className="tools-used-section">
-            <h1>Tools used</h1>
+            <h1>Tools</h1>
             <ul>{toolCards}</ul>
         </div>
     )

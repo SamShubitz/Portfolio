@@ -3,18 +3,13 @@ import lemon from "./assets/Lemon.svg";
 import caged from "./assets/Logo.jpeg";
 import flashcard from "./assets/Flashcard.jpeg";
 import typescript from "./assets/Typescript.svg";
+import javascript from "./assets/JS.svg";
 import css from "./assets/CSS.svg";
 import react from "./assets/React.svg";
+import netcore from "./assets/netcore.svg";
+import postgres from "./assets/postgresql.svg";
 
 const cards = [
-  {
-    name: "Little Lemon Restaurant",
-    image: lemon,
-    description: "Final project for a Coursera capstone course",
-    url: "littlelemon",
-    gitHubLink: "https://github.com/SamShubitz/Lemon-app",
-    toolsUsed: [react, css],
-  },
   {
     name: "unCAGED Guitar App",
     image: caged,
@@ -22,7 +17,15 @@ const cards = [
       "A web app that allows users to learn from chord diagrams or create and save their own",
     url: "uncagedguitar",
     gitHubLink: "https://github.com/SamShubitz/CAGED-Guitar-App",
-    toolsUsed: [typescript, react, css],
+    toolsUsed: [typescript, react, css, netcore, postgres],
+  },
+  {
+    name: "Little Lemon Restaurant",
+    image: lemon,
+    description: "A mock restaurant website project",
+    url: "littlelemon",
+    gitHubLink: "https://github.com/SamShubitz/Lemon-app",
+    toolsUsed: [javascript, react, css],
   },
   {
     name: "Trivia Cards App",

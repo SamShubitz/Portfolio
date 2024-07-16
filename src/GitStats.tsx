@@ -60,10 +60,10 @@ const GitStats = () => {
     
     const displayData = calculateDisplayData();
 
-    const pieStyle = {fontFamily: "Avenir", width: '300px', height: '300px',
-        fontWeight: "bold", paddingInline: "2rem", paddingBlock: "1rem",
-        borderBottomRightRadius: "6px", borderBottom: "6px solid rgb(61, 67, 84)",
-        paddingBottom: "4rem"}
+    const pieStyle = {
+        fontFamily: "Avenir", width: '300px', height: '300px',
+        fontWeight: "bold", paddingInline: "2rem",
+        paddingBlock: "1rem", paddingBottom: "3rem", padding: "0"}
 
     return (
         <div className="langs-used-section">
@@ -79,8 +79,8 @@ const GitStats = () => {
                     y={y}
                     dx={dx}
                     dy={dy}
-                    dominant-baseline="central"
-                    text-anchor="middle"
+                    dominantBaseline="central"
+                    textAnchor="middle"
                     style={{
                         fill: 'black', pointerEvents: 'none', fontSize: '4px'
                     }}>

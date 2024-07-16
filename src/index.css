@@ -16,7 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(254, 251, 246);
+  background-color: rgb(249, 247, 245);
 }
 
 .app {
@@ -103,14 +103,14 @@ a {
   padding-bottom: .5rem;
   margin-right: 3rem;
   margin-bottom: 3rem;
-  color: rgb(61, 67, 84)
+  color: rgb(50, 54, 64);
 }
 
 #name {
   font-size: 2rem;
   padding-right: 5rem;
   padding-bottom: .5rem;
-  border-bottom: 5px solid rgb(61, 67, 84);
+  border-bottom: 5px solid rgb(43, 48, 60);
   border-bottom-right-radius: 9%;
 }
 
@@ -124,7 +124,7 @@ a {
 .about-section {
   min-height: 100vh;
   width: 100%;
-  padding-top: 5rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,52 +132,70 @@ a {
 
 .about-section > h1 {
   font-size: 3rem;
-  color: rgb(61, 67, 84);
+  color: rgb(43, 48, 60);
   padding-top: 3rem;
   margin-bottom: 2rem;
 }
 
 .about-section > p {
-  width: 30rem;
+  width: 40rem;
   padding-bottom: 3rem;
   font-size: 1.2rem;
-  border-bottom: 5px solid rgb(61, 67, 84);
-  border-bottom-right-radius: 6px;
+  border-bottom: 4px solid rgb(61, 67, 84);
+  border-bottom-right-radius: 4px;
   font-weight: 300;
 }
 
 .about-data {
- display: flex;
- justify-content: space-evenly;
+  margin-top: 1rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 3.5rem;
 }
 
 .langs-used-section > h1, .tools-used-section > h1 {
-  font-size: 2.6rem;
-  color: rgb(61, 67, 84);
+  font-size: 2.5rem;
+  color: rgb(43, 48, 60);
   text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .tools-used-section {
-  max-width: 20rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .langs-used-section {
-
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tools-used-section > ul {
-  margin-top: 3rem;
+  background-color: rgb(219, 218, 214);
+  border-radius: 16px;
+  padding-left: 0;
+  padding-block: 1.5rem;
+  margin-top: .5rem;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
 .tool-card {
-  background-color: rgb(194, 194, 194);
+  background-color: rgb(249, 247, 245);
   border-radius: 12px;
   height: 2.2rem;
-  width: 6rem;
+  width: 7rem;
   padding-inline: .7rem;
   display: flex;
   align-items: center;
@@ -193,6 +211,14 @@ a {
   height: 1.5rem;
 }
 
+#JavaScript > img {
+  border-radius: 3px;
+}
+
+#efcore > img {
+  border-radius: 3px;
+}
+
 .projects-section {
   min-height: 100vh;
   width: 100%;
@@ -205,7 +231,7 @@ a {
 
 .projects-section-title {
   font-size: 3rem;
-  color: rgb(61, 67, 84);
+  color: rgb(43, 48, 60);
   padding-block: 2rem;
   margin-bottom: 3rem;
 }
@@ -213,11 +239,12 @@ a {
 .card {
   background-color: rgb(253, 253, 250);
   width: 25rem;
-  min-height: 13rem;
+  min-height: 21.5rem;
   border: 1px solid rgb(151, 151, 151);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding-bottom: 1rem;
 }
 
@@ -225,6 +252,7 @@ a {
   min-height: 5rem;
   padding-inline: 1rem;
   padding-top: 1rem;
+  padding-right: 1rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -234,8 +262,17 @@ a {
   justify-content: space-evenly;
 }
 
+.card-header > a > h1 {
+  margin-left: .2rem;
+  font-size: 3rem;
+}
+
 .card-body {
   margin-inline: 1rem;
+}
+
+.card-body > p {
+  margin-bottom: 2rem;
 }
 
 .tool-list > li > a {
@@ -254,8 +291,8 @@ a {
 }
 
 .app-logo {
-  max-height: 5rem;
-  max-width: 7.6rem;
+  max-height: 6rem;
+  max-width: 8rem;
 }
 
 .tool-logo {
@@ -268,10 +305,6 @@ a {
   display: flex;
   gap: 1rem;
   padding: 0;
-}
-
-.littlelemon > .card-body {
-  padding-top: 1rem;
 }
 
 .littlelemon > .card-header:hover {
@@ -293,6 +326,10 @@ a {
 
 .triviacards > .card-header > a > h1 {
   color: rgba(255, 255, 255, 0.87);
+}
+
+.triviacards > .card-header > a > img {
+  height: 5rem;
 }
 
 .triviacards > .card-header > a > h1:hover {
@@ -323,7 +360,7 @@ a {
 
 .contact-section > h1 {
   font-size: 3rem;
-  color: rgb(61, 67, 84);
+  color: rgb(43, 48, 60);
   padding-top: 2rem;
   margin-bottom: 4rem;
 }
