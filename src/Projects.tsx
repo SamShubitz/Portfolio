@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import lemon from "./assets/Lemon.svg";
+import lemon from "./assets/lemon.png";
 import caged from "./assets/Logo.jpeg";
 import flashcard from "./assets/Flashcard.jpeg";
 import typescript from "./assets/Typescript.svg";

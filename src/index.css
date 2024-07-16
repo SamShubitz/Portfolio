@@ -404,7 +404,7 @@ a {
   height: 2rem;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .card {
     width: 20rem;
   }
@@ -419,6 +419,10 @@ a {
 
   .about-section > p {
     width: 20rem;
+  }
+
+  .littlelemon > .card-header > a > img {
+    width: 3rem;
   }
 
 }

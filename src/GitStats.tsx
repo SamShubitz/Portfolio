@@ -31,8 +31,8 @@ const GitStats = () => {
     })
 
     const calculateDisplayData = () => {
-        const totals: GitStatsType = {};
         const gitStats: GitStatsType[] | undefined = gitStatsQuery.data
+        const totals: GitStatsType = {};
 
         gitStats?.forEach((repoStats) => {
             Object.entries(repoStats).forEach(([lang, stat]) => {
@@ -42,7 +42,16 @@ const GitStats = () => {
                     totals[lang] = stat;
                 }
             })
-    })
+    }); 
+        const percentTotals: GitStatsType = {}
+        let sum = 0;
+        for (let lang in totals) {
+            sum += totals[lang]
+        }
+        for (let lang in totals) {
+            percentTotals[lang] = (totals[lang] / sum) * 100;
+        }
+
         const pieData = [];
         const pieColors = {
             TypeScript: "#181c2e",
@@ -52,7 +61,7 @@ const GitStats = () => {
             HTML: "#e3a427",
         }
         for (let lang in totals) {
-            const entry = {title: lang, value: totals[lang], color: pieColors[lang as Language]}
+            const entry = {title: lang, value: percentTotals[lang], color: pieColors[lang as Language]}
             pieData.push(entry)
         }
         return pieData
@@ -85,7 +94,7 @@ const GitStats = () => {
                         fill: 'black', pointerEvents: 'none', fontSize: '4px'
                     }}>
                     <tspan x={x-2} y={y+1} dx={dx} dy={dy}>{dataEntry.title}</tspan>
-                    <tspan x={x-2} y={y-5} dx={dx} dy={dy}>{`${Math.round(dataEntry.value/1000)}%`}</tspan>
+                    <tspan x={x-2} y={y-5} dx={dx} dy={dy}>{`${Math.round(dataEntry.value)}%`}</tspan>
                 </text>
             )}
             data={displayData}
