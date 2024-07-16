@@ -5,7 +5,7 @@ const About = () => {
     <div className="about-section" id="about">
       <h1>About me</h1>
       <p>
-        I like making React apps and am interested in all things to do with
+        I enjoy making React apps and am interested in all things to do with
         software development. My professional background is in teaching music
         and foreign language, and I see coding as another expression of what
         makes those subjects so rewarding to learn and think about. There are

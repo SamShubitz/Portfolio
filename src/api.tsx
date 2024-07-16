@@ -1,6 +1,5 @@
 import axios from 'Axios';
 
-
 export const getURLs = async () => {
     const response = await axios.get("https://api.github.com/users/samshubitz/repos")
     return response.data;

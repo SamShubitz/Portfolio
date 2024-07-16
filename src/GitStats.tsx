@@ -6,6 +6,8 @@ type GitStatsType = {
     [language: string]: number;
 }
 
+type Language = "TypeScript" | "JavaScript" | "CSS" | "C#" | "HTML"
+
 const GitStats = () => {
     const urlQuery = useQuery({
         queryKey: ["urls"],
@@ -50,7 +52,7 @@ const GitStats = () => {
             HTML: "#e3a427",
         }
         for (let lang in totals) {
-            const entry = {title: lang, value: totals[lang], color: pieColors[lang]}
+            const entry = {title: lang, value: totals[lang], color: pieColors[lang as Language]}
             pieData.push(entry)
         }
         return pieData
@@ -61,30 +63,30 @@ const GitStats = () => {
 
 
     return (
-        <PieChart
-        style={{fontFamily: "Avenir", width: '300px', height: '300px', fontWeight: "bold", paddingInline: "1rem", paddingBlock: "1rem", borderRadius: "16px"}}
-        lineWidth={25}
-        animate={true}
-        animationDuration={200}
-        animationEasing={"transitionTimingFunction: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1)"}
-
-        label={({ x, y, dx, dy, dataEntry }) => (
-            <text
-                x={x}
-                y={y}
-                dx={dx}
-                dy={dy}
-                dominant-baseline="central"
-                text-anchor="middle"
-                style={{
-                    fill: 'black', pointerEvents: 'none', fontSize: '4px'
-                }}>
-                <tspan x={x-2} y={y+1} dx={dx} dy={dy}>{dataEntry.title}</tspan>
-                <tspan x={x-2} y={y-5} dx={dx} dy={dy}>{`${Math.round(dataEntry.value/1000)}%`}</tspan>
-            </text>
-        )}
-        data={displayData}
-    />
+        <div className="langs-used-section">
+            <h1>Languages used</h1>
+            <PieChart
+            animate={true}
+            style={{fontFamily: "Avenir", width: '300px', height: '300px', fontWeight: "bold", paddingInline: "1rem", paddingBlock: "1rem", borderBottomRightRadius: "6px", borderBottom: "5px solid rgb(61, 67, 84)", paddingBottom: "4rem"}}
+            lineWidth={25}
+            label={({ x, y, dx, dy, dataEntry }) => (
+                <text
+                    x={x}
+                    y={y}
+                    dx={dx}
+                    dy={dy}
+                    dominant-baseline="central"
+                    text-anchor="middle"
+                    style={{
+                        fill: 'black', pointerEvents: 'none', fontSize: '4px'
+                    }}>
+                    <tspan x={x-2} y={y+1} dx={dx} dy={dy}>{dataEntry.title}</tspan>
+                    <tspan x={x-2} y={y-5} dx={dx} dy={dy}>{`${Math.round(dataEntry.value/1000)}%`}</tspan>
+                </text>
+            )}
+            data={displayData}
+        />
+        </div>
     )
 
 }
