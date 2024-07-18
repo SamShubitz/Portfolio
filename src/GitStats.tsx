@@ -11,27 +11,27 @@ type Language = "TypeScript" | "JavaScript" | "CSS" | "C#" | "HTML"
 const defaultData = [
     {
         "title": "TypeScript",
-        "value": 38.019200950150115,
-        "color": "#181c2e"
+        "value": 38.01,
+        "color": "#181f3e"
     },
     {
         "title": "CSS",
-        "value": 23.951700702715186,
+        "value": 23.95,
         "color": "#626280"
     },
     {
         "title": "HTML",
-        "value": 3.4665632938537168,
+        "value": 3.46,
         "color": "#e3a427"
     },
     {
         "title": "C#",
-        "value": 16.6672165220547,
+        "value": 16.66,
         "color": "#7885bf"
     },
     {
         "title": "JavaScript",
-        "value": 17.895318531226287,
+        "value": 17.89,
         "color": "#363e63"
     }
 ]
