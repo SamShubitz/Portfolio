@@ -11,8 +11,8 @@ const About = () => {
         and foreign language, and I see coding as another expression of what
         makes those subjects so rewarding to learn and think about. There are
         always new things to learn and new problems to solve. I'm looking for a
-        position where I can continue to sharpen my skills as a developer while
-        also having the privilege of working with and learning from others.
+        position where I can continue to sharpen my skills as a developer in an
+        environment where I can work with and learn from others.
       </p>
       <div className="about-data">
         <GitStats/>

@@ -16,7 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(249, 247, 245);
+  background-color: #1b1a1d;
 }
 
 .app {
@@ -51,12 +51,12 @@ a {
 }
 
 .header-nav {
-  background-color: rgb(61, 67, 84);
-  width: 100%;
+  background-color: #1b1a1d;
+  width: 100vw;
   height: 5rem;
   position: sticky;
   top: 0px;
-  box-shadow: 0 1px 4px #afafaf;
+  box-shadow: 0 1px 4px #282828;
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -75,7 +75,7 @@ a {
 }
 
 .header-list > li > a {
-  color: white;
+  color: rgb(246, 248, 223);
 }
 
 .header-list > li > a:hover {
@@ -89,12 +89,15 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation-name: fade-in;
+  animation-duration: 1s;
 }
 
 .profile-pic {
   height: 13rem;
   width: 11.5rem;
   border-radius: 12px;
+  border: 5px solid rgb(111, 124, 159);
 }
 
 .home-page-header {
@@ -103,20 +106,36 @@ a {
   padding-bottom: .5rem;
   margin-right: 3rem;
   margin-bottom: 3rem;
-  color: rgb(50, 54, 64);
+  color: rgb(242, 245, 208);
+
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+    transform: translateX(-1rem);
+  } to {
+    opacity: 100%;
+    transform: translateX(0);
+  }
 }
 
 #name {
   font-size: 2rem;
   padding-right: 5rem;
   padding-bottom: .5rem;
-  border-bottom: 5px solid rgb(43, 48, 60);
+  border-bottom: 5px solid rgb(111, 124, 159);
   border-bottom-right-radius: 9%;
+  color: rgb(242, 245, 208);
 }
 
-.home-page > p {
+.home-page-body {
+
+}
+
+.home-page-body > p {
   font-size: .9rem;
-  color: black;
+  color: rgb(242, 245, 208);
   margin-top: -.2rem;
   font-weight: bold;
 }
@@ -132,16 +151,17 @@ a {
 
 .about-section > h1 {
   font-size: 3rem;
-  color: rgb(43, 48, 60);
+  color: rgb(242, 245, 208);
   padding-top: 3rem;
   margin-bottom: 2rem;
 }
 
 .about-section > p {
-  width: 40rem;
-  padding-bottom: 3rem;
+  max-width: 40rem;
+  padding-bottom: 2rem;
   font-size: 1.2rem;
-  border-bottom: 4px solid rgb(61, 67, 84);
+  color: rgb(246, 247, 239);
+  border-bottom: 4px solid rgb(111, 124, 159);
   border-bottom-right-radius: 4px;
   font-weight: 300;
 }
@@ -157,9 +177,8 @@ a {
 }
 
 .langs-used-section > h1, .tools-used-section > h1 {
-  font-size: 2.5rem;
-  color: rgb(43, 48, 60);
-  text-align: center;
+  font-size: 2.3rem;
+  color: rgb(242, 245, 208);
   margin-top: 3rem;
   margin-bottom: 4rem;
 }
@@ -179,7 +198,7 @@ a {
 }
 
 .tools-used-section > ul {
-  background-color: rgb(219, 218, 214);
+  background-color: rgb(186, 186, 186);
   border-radius: 16px;
   padding-left: 0;
   padding-block: 1.5rem;
@@ -192,7 +211,7 @@ a {
 }
 
 .tool-card {
-  background-color: rgb(249, 247, 245);
+  background-color: rgb(249, 249, 244);
   border-radius: 12px;
   height: 2.2rem;
   width: 7rem;
@@ -231,7 +250,7 @@ a {
 
 .projects-section-title {
   font-size: 3rem;
-  color: rgb(43, 48, 60);
+  color: rgb(242, 245, 208);
   padding-block: 2rem;
   margin-bottom: 3rem;
 }
@@ -240,7 +259,6 @@ a {
   background-color: rgb(253, 253, 250);
   width: 25rem;
   min-height: 21.5rem;
-  border: 1px solid rgb(151, 151, 151);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -360,7 +378,7 @@ a {
 
 .contact-section > h1 {
   font-size: 3rem;
-  color: rgb(43, 48, 60);
+  color: rgb(242, 245, 208);
   padding-top: 2rem;
   margin-bottom: 4rem;
 }
@@ -374,12 +392,14 @@ a {
 }
 
 .contact-list > li {
+  margin-block: .5rem;
   border-radius: 32px;
   padding-inline: 1rem;
+  background-color: rgb(248, 250, 240);
 }
 
 .contact-list > li:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(214, 216, 206);;
 }
 
 .contact-link {

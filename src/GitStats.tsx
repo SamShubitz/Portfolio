@@ -8,10 +8,39 @@ type GitStatsType = {
 
 type Language = "TypeScript" | "JavaScript" | "CSS" | "C#" | "HTML"
 
+const defaultData = [
+    {
+        "title": "TypeScript",
+        "value": 38.019200950150115,
+        "color": "#181c2e"
+    },
+    {
+        "title": "CSS",
+        "value": 23.951700702715186,
+        "color": "#626280"
+    },
+    {
+        "title": "HTML",
+        "value": 3.4665632938537168,
+        "color": "#e3a427"
+    },
+    {
+        "title": "C#",
+        "value": 16.6672165220547,
+        "color": "#7885bf"
+    },
+    {
+        "title": "JavaScript",
+        "value": 17.895318531226287,
+        "color": "#363e63"
+    }
+]
+
 const GitStats = () => {
     const urlQuery = useQuery({
         queryKey: ["urls"],
         queryFn: getURLs,
+        enabled: defaultData === undefined, // query is disabled
         staleTime: Infinity
     })
 
@@ -21,11 +50,12 @@ const GitStats = () => {
             const urls = urlQuery.data.map((repo: any) => {
             return repo.languages_url
         });
-    const responses = urls.map((url: string) => {
-        return getStats(url)
-    })
-        return Promise.all(responses)
-    },
+
+            const responses = urls.map((url: string) => {
+            return getStats(url)
+        })
+            return Promise.all(responses)
+        },
         enabled: urlQuery.isSuccess,
         staleTime: Infinity
     })
@@ -52,7 +82,7 @@ const GitStats = () => {
             percentTotals[lang] = (totals[lang] / sum) * 100;
         }
 
-        const pieData = [];
+        const displayData = [];
         const pieColors = {
             TypeScript: "#181c2e",
             JavaScript: "#363e63",
@@ -62,12 +92,14 @@ const GitStats = () => {
         }
         for (let lang in totals) {
             const entry = {title: lang, value: percentTotals[lang], color: pieColors[lang as Language]}
-            pieData.push(entry)
+            displayData.push(entry)
         }
-        return pieData
+        return displayData
     }
     
-    const displayData = calculateDisplayData();
+    const pieData = calculateDisplayData();
+
+    const displayData = urlQuery.isSuccess ? pieData : defaultData;
 
     const pieStyle = {
         fontFamily: "Avenir", width: '300px', height: '300px',
@@ -91,14 +123,14 @@ const GitStats = () => {
                     dominantBaseline="central"
                     textAnchor="middle"
                     style={{
-                        fill: 'black', pointerEvents: 'none', fontSize: '4px'
+                        fill: 'white', pointerEvents: 'none', fontSize: '4px'
                     }}>
                     <tspan x={x-2} y={y+1} dx={dx} dy={dy}>{dataEntry.title}</tspan>
                     <tspan x={x-2} y={y-5} dx={dx} dy={dy}>{`${Math.round(dataEntry.value)}%`}</tspan>
                 </text>
             )}
             data={displayData}
-        />
+            />
         </div>
     )
 
