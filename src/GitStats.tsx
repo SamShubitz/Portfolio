@@ -123,7 +123,7 @@ const GitStats = () => {
                     dominantBaseline="central"
                     textAnchor="middle"
                     style={{
-                        fill: 'white', pointerEvents: 'none', fontSize: '4px'
+                        fill: '#F6F8DF', pointerEvents: 'none', fontSize: '4px'
                     }}>
                     <tspan x={x-2} y={y+1} dx={dx} dy={dy}>{dataEntry.title}</tspan>
                     <tspan x={x-2} y={y-5} dx={dx} dy={dy}>{`${Math.round(dataEntry.value)}%`}</tspan>

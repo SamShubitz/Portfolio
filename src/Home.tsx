@@ -1,12 +1,15 @@
-import Profile from "./assets/Profile.jpeg";
+import Profile from "./assets/profile.jpg";
 
 const Home = () => {
   return (
     <div className="home-page">
-      <h1 className="home-page-header">Hi, my name is...</h1>
-      <img className="profile-pic" src={Profile} alt="profile picture" />
-      <h1 id="name">Sam Shubitz</h1>
+      <div className="home-text">
+      <h1 className="home-page-header">Sam Shubitz</h1>
       <p>Welcome to my portfolio</p>
+      </div>
+      <div className="home-body">
+      <img src={Profile} alt="profile image"/>
+      </div>
     </div>
   );
 };
