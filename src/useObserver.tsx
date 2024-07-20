@@ -8,7 +8,7 @@ const useObserver = (): [any, boolean] => {
         const observer = new IntersectionObserver((entries) => {
             const [entry] = entries;
             setIsVisible(entry.isIntersecting);
-        },{root: null, threshold: .3, rootMargin: "60px"})
+        },{root: null})
         
         if (ref.current) {
         observer.observe(ref.current)
