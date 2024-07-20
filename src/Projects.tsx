@@ -8,6 +8,7 @@ import css from "./assets/CSS.svg";
 import react from "./assets/React.svg";
 import netcore from "./assets/netcore.svg";
 import postgres from "./assets/postgresql.svg";
+import useObserver from "./useObserver";
 
 const cards = [
   {
@@ -55,8 +56,11 @@ const projectCards = cards.map((card) => {
 });
 
 const Projects = () => {
+  const [ref, isVisible] = useObserver();
+  const classname = isVisible ? "visible" : "hidden";
+
   return (
-    <div className="projects-section" id="projects">
+    <div ref={ref} className={`projects-section ${classname}`} id="projects">
       <h1 className="projects-section-title">My Projects</h1>
       <ul className="project-list">{projectCards}</ul>
     </div>

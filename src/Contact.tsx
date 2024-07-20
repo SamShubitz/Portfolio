@@ -1,21 +1,24 @@
 import github from "./assets/Github.svg";
 import email from "./assets/Email.svg";
+import useObserver from "./useObserver";
+
+const contacts = [
+  {
+    image: github,
+    href: "https://github.com/SamShubitz",
+    text: "GitHub",
+    stringUrl: "https://github.com/SamShubitz",
+  },
+  {
+    image: email,
+    href: "mailto:samshubitz@gmail.com",
+    text: "Email",
+    stringUrl: "samshubitz@gmail.com",
+  },
+];
 
 const Contact = () => {
-  const contacts = [
-    {
-      image: github,
-      href: "https://github.com/SamShubitz",
-      text: "GitHub",
-      stringUrl: "https://github.com/SamShubitz",
-    },
-    {
-      image: email,
-      href: "mailto:samshubitz@gmail.com",
-      text: "Email",
-      stringUrl: "samshubitz@gmail.com",
-    },
-  ];
+  const [ref, isVisible] = useObserver();
 
   const contactList = contacts.map((contact, index) => {
     return (
@@ -35,8 +38,10 @@ const Contact = () => {
     );
   });
 
+  const classname = isVisible ? "visible" : "hidden";
+
   return (
-    <div className="contact-section" id="contact">
+    <div ref={ref} className={`contact-section ${classname}`} id="contact">
       <h1>Contact me</h1>
       <ul className="contact-list">{contactList}</ul>
       <p></p>
