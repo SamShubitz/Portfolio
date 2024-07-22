@@ -32,7 +32,7 @@ const Contact = () => {
             />
             <p>{contact.text}</p>
           </a>
-          <p>{contact.stringUrl}</p>
+          <p className="contact-text">{contact.stringUrl}</p>
         </div>
       </li>
     );
@@ -44,7 +44,6 @@ const Contact = () => {
     <div ref={ref} className={`contact-section ${classname}`} id="contact">
       <h1>Contact me</h1>
       <ul className="contact-list">{contactList}</ul>
-      <p></p>
     </div>
   );
 };

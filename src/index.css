@@ -7,7 +7,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --primary: #0e0e0e;
-  --secondary: #F6F8DF;
+  --secondary: #f6f8df;
   --accent: #1ec8fc;
 }
 
@@ -113,11 +113,11 @@ a {
 .home-page-header {
   font-size: 5rem;
   padding-right: 5rem;
-  padding-bottom: .5rem;
-  margin-bottom: .7rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   margin-right: 3rem;
   color: var(--secondary);
-  border-bottom: solid .5rem var(--accent);
+  border-bottom: solid 0.5rem var(--accent);
   border-bottom-right-radius: 4px;
 }
 
@@ -127,14 +127,13 @@ a {
   margin: 0 auto;
   border-radius: 12px;
   background-color: var(--accent);
-
 }
 
 .home-body > img {
   padding: 1.5rem;
   padding-top: 1rem;
   padding-bottom: 3rem;
-  background-color:rgb(215, 213, 203);
+  background-color: rgb(215, 213, 203);
   align-self: center;
   max-width: 18rem;
   height: auto;
@@ -143,16 +142,16 @@ a {
 }
 
 .home-text > h1 {
- max-width: 30rem;
+  max-width: 30rem;
 }
 
 .home-text > p {
   font-size: 1rem;
   color: var(--secondary);
   width: fit-content;
-  margin-top: -.2rem;
+  margin-top: -0.2rem;
   font-weight: bold;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .about-section {
@@ -165,7 +164,7 @@ a {
 }
 
 .about-text {
-  max-width: 40rem;
+  max-width: 36rem;
   text-align: left;
 }
 
@@ -178,6 +177,7 @@ a {
 }
 
 .about-text > p {
+  text-align: justify;
   padding-bottom: 1.5rem;
   font-size: 1.2rem;
   color: var(--secondary);
@@ -196,7 +196,8 @@ a {
   padding-bottom: 3.5rem;
 }
 
-.langs-used-section > h1, .tools-used-section > h1 {
+.langs-used-section > h1,
+.tools-used-section > h1 {
   font-size: 2.3rem;
   font-weight: 100;
   color: var(--secondary);
@@ -223,7 +224,7 @@ a {
   border-radius: 16px;
   padding-left: 0;
   padding-block: 1.5rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -236,14 +237,14 @@ a {
   border-radius: 12px;
   height: 2.2rem;
   width: 7rem;
-  padding-inline: .7rem;
+  padding-inline: 0.7rem;
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .tool-card > p {
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 
@@ -263,24 +264,23 @@ a {
   min-height: 100vh;
   width: 100%;
   padding-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-bottom: 4rem;
 }
 
 .projects-section-title {
+  text-align: center;
   font-weight: 100;
   font-size: 3rem;
   color: var(--secondary);
   padding-block: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .card {
+  flex: 1;
   background-color: rgb(253, 253, 250);
-  width: 25rem;
-  min-height: 21.5rem;
+  max-width: 27rem;
+  min-height: 15rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -303,7 +303,7 @@ a {
 }
 
 .card-header > a > h1 {
-  margin-left: .2rem;
+  margin-left: 0.2rem;
   font-size: 3rem;
 }
 
@@ -316,7 +316,7 @@ a {
 }
 
 .tool-list > li > a {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .card-footer {
@@ -326,7 +326,7 @@ a {
 }
 
 .card-footer > a {
-  font-size: .8rem;
+  font-size: 0.8rem;
   display: inline block;
 }
 
@@ -357,19 +357,21 @@ a {
 }
 
 .uncagedguitar > .card-header > a > h1 {
-  color: #F4CE14;
- }
+  color: #f4ce14;
+}
 
- .uncagedguitar > .card-header > a > h1:hover {
+.uncagedguitar > .card-header > a > h1:hover {
   color: #c6a812;
- }
+}
 
 .triviacards > .card-header > a > h1 {
   color: rgba(255, 255, 255, 0.87);
+  margin-bottom: rem;
 }
 
 .triviacards > .card-header > a > img {
-  height: 5rem;
+  height: 3.5rem;
+  width: 4.5rem;
 }
 
 .triviacards > .card-header > a > h1:hover {
@@ -384,9 +386,26 @@ a {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
+}
+
+.proj-item {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.proj-item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.proj-item > p {
+  flex: 1;
+  color: var(--secondary);
+  max-width: 25rem;
 }
 
 .contact-section {
@@ -415,32 +434,28 @@ a {
 }
 
 .contact-list > li {
-  margin-block: .5rem;
+  margin-block: 0.5rem;
   border-radius: 32px;
   padding-inline: 1rem;
   background-color: rgb(248, 250, 240);
 }
 
 .contact-list > li:hover {
-  background-color: rgb(214, 216, 206);;
+  background-color: rgb(214, 216, 206);
 }
 
 .contact-link {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   width: 3.5rem;
-}
-
-.contact-link-section {
-  display: flex;
 }
 
 .contact-link-section {
   display: flex;
   gap: 3rem;
   font-weight: 300;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .contact-icon {
@@ -452,8 +467,18 @@ a {
     width: 20rem;
   }
 
-  .home-page, .about-section {
+  .contact-text {
+    font-size: 0.54rem;
+    align-self: center;
+  }
+
+  .home-page,
+  .about-section {
     margin: 0;
+  }
+
+  .contat-section > a > p {
+    font-size: 2rem;
   }
 
   .home-body > img {
@@ -479,5 +504,4 @@ a {
   .littlelemon > .card-header > a > img {
     width: 3rem;
   }
-
 }

@@ -2,7 +2,6 @@ interface CardProps {
   name: string;
   className: string;
   image: string;
-  description: string;
   URL: string;
   gitHubLink: string;
   toolsUsed: string[];
@@ -12,7 +11,6 @@ const ProjectCard = ({
   name,
   className,
   image,
-  description,
   URL,
   gitHubLink,
   toolsUsed,
@@ -34,7 +32,6 @@ const ProjectCard = ({
         </a>
       </div>
       <div className="card-body">
-        <p>{description}</p>
         <div className="card-footer">
           <a href={gitHubLink}>View on GitHub</a>
           <ul className="tool-list">{toolList}</ul>

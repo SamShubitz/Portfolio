@@ -15,7 +15,7 @@ const cards = [
     name: "unCAGED Guitar App",
     image: caged,
     description:
-      "A web app that allows users to learn from chord diagrams or create and save their own",
+      "A web app that allows users to learn from chord diagrams or create and save their own. The hosted version uses local storage to allow saving of chord progressions. The fullstack implementation uses .NET Core and PostGreSQL, and can be viewed on my GitHub page.",
     url: "uncagedguitar",
     gitHubLink: "https://github.com/SamShubitz/CAGED-Guitar-App",
     toolsUsed: [typescript, react, css, netcore, postgres],
@@ -23,7 +23,8 @@ const cards = [
   {
     name: "Little Lemon Restaurant",
     image: lemon,
-    description: "A mock restaurant website project",
+    description:
+      "A mock restaurant website with a simulated reservation system. UI design comes from existing assets but its implementation is fully original.",
     url: "littlelemon",
     gitHubLink: "https://github.com/SamShubitz/Lemon-app",
     toolsUsed: [javascript, react, css],
@@ -32,7 +33,7 @@ const cards = [
     name: "Trivia Cards App",
     image: flashcard,
     description:
-      "A simple web app that displays trivia flash cards and allows users to create their own",
+      "A simple web app that makes use of an API to display trivia flash cards and also allows users to create their own.",
     url: "triviacards",
     gitHubLink: "https://github.com/SamShubitz/TriviaCardsApp",
     toolsUsed: [typescript, react, css],
@@ -41,12 +42,12 @@ const cards = [
 
 const projectCards = cards.map((card) => {
   return (
-    <li key={card.name}>
+    <li className="proj-item" key={card.name}>
+      <p>{card.description}</p>
       <ProjectCard
         name={card.name}
         className={card.url}
         image={card.image}
-        description={card.description}
         URL={card.url}
         gitHubLink={card.gitHubLink}
         toolsUsed={card.toolsUsed}
