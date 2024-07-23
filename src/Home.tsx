@@ -1,4 +1,4 @@
-import Profile from "./assets/profile.jpg";
+// import Profile from "./assets/prof-img.jpg";
 import useObserver from "./useObserver";
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
         <p>Welcome to my portfolio</p>
       </div>
       <div className="home-body">
-        {/* <img src={Profile} alt="profile image"/> */}
+        {/* <img src={Profile} alt="profile image" /> */}
       </div>
     </div>
   );

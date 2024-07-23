@@ -15,19 +15,10 @@ const cards = [
     name: "unCAGED Guitar App",
     image: caged,
     description:
-      "A web app that allows users to learn from chord diagrams or create and save their own. The hosted version uses local storage to allow saving of chord progressions. The fullstack implementation uses .NET Core and PostGreSQL, and can be viewed on my GitHub page.",
+      "A web app that allows users to learn from chord diagrams or create and save their own. The hosted version uses local storage to allow saving of chord progressions. The fullstack implementation uses .NET Core and can be viewed on my GitHub page.",
     url: "uncagedguitar",
     gitHubLink: "https://github.com/SamShubitz/CAGED-Guitar-App",
     toolsUsed: [typescript, react, css, netcore, postgres],
-  },
-  {
-    name: "Little Lemon Restaurant",
-    image: lemon,
-    description:
-      "A mock restaurant website with a simulated reservation system. UI design comes from existing assets but its implementation is fully original.",
-    url: "littlelemon",
-    gitHubLink: "https://github.com/SamShubitz/Lemon-app",
-    toolsUsed: [javascript, react, css],
   },
   {
     name: "Trivia Cards App",
@@ -38,12 +29,26 @@ const cards = [
     gitHubLink: "https://github.com/SamShubitz/TriviaCardsApp",
     toolsUsed: [typescript, react, css],
   },
+  {
+    name: "Little Lemon Restaurant",
+    image: lemon,
+    description:
+      "A mock restaurant website with a simulated reservation system. Implementation of the UI is fully original, working from given assets and designs.",
+    url: "littlelemon",
+    gitHubLink: "https://github.com/SamShubitz/Lemon-app",
+    toolsUsed: [javascript, react, css],
+  },
 ];
 
 const projectCards = cards.map((card) => {
   return (
     <li className="proj-item" key={card.name}>
-      <p>{card.description}</p>
+      <div className="proj-text">
+        <a href={card.url} target="_blank">
+          <h1>{card.name}</h1>
+        </a>
+        <p>{card.description}</p>
+      </div>
       <ProjectCard
         name={card.name}
         className={card.url}
