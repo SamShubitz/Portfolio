@@ -1,7 +1,18 @@
+import Hamburger from "./Hamburger";
+import { useState } from "react";
+
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const linksClass = isOpen ? "dropdown-list" : "header-list";
+
   return (
     <nav className="header-nav">
-      <ul className="header-list">
+      <ul onClick={toggleOpen} className={linksClass}>
         <li>
           <a href="#">Home</a>
         </li>
@@ -15,6 +26,7 @@ const Header = () => {
           <a href="#contact">Contact</a>
         </li>
       </ul>
+      <Hamburger onClick={toggleOpen} />
     </nav>
   );
 };

@@ -68,6 +68,38 @@ a {
   font-weight: bold;
 }
 
+.hamburger {
+  display: none;
+  z-index: 1;
+}
+
+.dropdown-list {
+  padding: 0;
+  display: none;
+  z-index: 1;
+  position: fixed;
+  list-style: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.5s ease-in;
+}
+
+.dropdown-list > li {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.dropdown-list > li > a {
+  color: var(--secondary);
+  font-size: 2.5rem;
+  position: relative;
+  display: flex;
+  top: 10rem;
+}
+
 .header-nav {
   background-color: var(--primary);
   width: 100vw;
@@ -129,9 +161,6 @@ a {
   height: auto;
   border-radius: 2%;
   box-shadow: 0 1px 3px #747575;
-}
-
-.home-text {
 }
 
 .home-text > p {
@@ -255,6 +284,7 @@ a {
   width: 100%;
   padding-top: 3rem;
   padding-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 .projects-section-title {
@@ -271,7 +301,7 @@ a {
   background-color: rgb(253, 253, 250);
   max-width: 27rem;
   min-height: 15rem;
-  border-radius: 2px;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -284,8 +314,8 @@ a {
   padding-inline: 1rem;
   padding-top: 1rem;
   padding-right: 1rem;
-  border-top-left-radius: 1px;
-  border-top-right-radius: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .card-header > a {
@@ -476,6 +506,20 @@ a {
 }
 
 @media screen and (max-width: 500px) {
+  .header-list {
+    display: none;
+  }
+
+  .dropdown-list {
+    display: block;
+  }
+
+  .hamburger {
+    display: inline;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
   .card {
     height: 15rem;
   }
