@@ -393,7 +393,6 @@ a {
 
 .triviacards > .card-header > a > h1 {
   color: rgba(255, 255, 255, 0.87);
-  margin-bottom: rem;
 }
 
 .triviacards > .card-header > a > img {
@@ -522,14 +521,17 @@ a {
     display: inline;
     margin-left: auto;
     margin-right: 2rem;
-  }
-
-  .card {
-    height: 15rem;
+    width: 2rem;
+    max-height: 2rem;
+    margin-top: 1.5rem;
   }
 
   .projects-section-title {
     margin: 0;
+  }
+
+  .card {
+    width: 10rem;
   }
 
   .contact-text {
@@ -572,5 +574,11 @@ a {
 
   .littlelemon > .card-header > a > img {
     width: 3rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .app-logo {
+    height: 3rem;
   }
 }
