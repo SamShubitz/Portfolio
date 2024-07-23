@@ -105,7 +105,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
 }
 
 .home-text {
@@ -124,25 +123,20 @@ a {
   border-bottom-right-radius: 4px;
 }
 
-.home-body {
-  position: relative;
-}
-
-/* .home-body > img {
+.home-body > img {
   filter: grayscale();
   max-width: 18rem;
   height: auto;
   border-radius: 2%;
   box-shadow: 0 1px 3px #747575;
-} */
+}
 
-.home-text > h1 {
+.home-text {
 }
 
 .home-text > p {
   font-size: 1rem;
   color: var(--secondary);
-  width: fit-content;
   margin-top: -0.2rem;
   font-weight: bold;
   padding: 0.5rem;
@@ -282,6 +276,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 1rem;
+  position: relative;
 }
 
 .card-header {
@@ -329,6 +324,8 @@ a {
 .app-logo {
   max-height: 6rem;
   max-width: 8rem;
+  position: absolute;
+  right: 1rem;
 }
 
 .tool-logo {
@@ -341,6 +338,10 @@ a {
   display: flex;
   gap: 1rem;
   padding: 0;
+}
+
+.card-header > a > h1 {
+  width: 22rem;
 }
 
 .littlelemon > .card-header:hover {
@@ -388,6 +389,7 @@ a {
 }
 
 .proj-item {
+  max-width: 100%;
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
@@ -475,12 +477,20 @@ a {
 
 @media screen and (max-width: 500px) {
   .card {
-    width: 20rem;
+    height: 15rem;
+  }
+
+  .projects-section-title {
+    margin: 0;
   }
 
   .contact-text {
-    font-size: 0.54rem;
+    font-size: 0.55rem;
     align-self: center;
+  }
+
+  .home-page-header {
+    width: 12rem;
   }
 
   .home-page,
@@ -488,8 +498,8 @@ a {
     margin: 0;
   }
 
-  .contat-section > a > p {
-    font-size: 2rem;
+  .about-text > p {
+    text-align: left;
   }
 
   .home-body > img {
