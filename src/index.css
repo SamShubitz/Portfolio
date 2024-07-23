@@ -74,8 +74,8 @@ a {
 }
 
 .dropdown-list {
-  padding: 0;
   display: none;
+  padding: 0;
   z-index: 1;
   position: fixed;
   list-style: none;
@@ -510,8 +510,12 @@ a {
     display: none;
   }
 
-  .dropdown-list {
+  .visible-list {
     display: block;
+  }
+
+  .hidden-list {
+    display: none;
   }
 
   .hamburger {

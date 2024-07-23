@@ -8,11 +8,28 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  const linksClass = isOpen ? "dropdown-list" : "header-list";
+  const visibility = isOpen ? "visible-list" : "hidden-list";
 
-  return (
-    <nav className="header-nav">
-      <ul onClick={toggleOpen} className={linksClass}>
+  const headerList = (
+    <ul className="header-list">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  );
+
+  const dropdownList = (
+    <>
+      <ul onClick={toggleOpen} className={`dropdown-list ${visibility}`}>
         <li>
           <a href="#">Home</a>
         </li>
@@ -27,6 +44,13 @@ const Header = () => {
         </li>
       </ul>
       <Hamburger onClick={toggleOpen} />
+    </>
+  );
+
+  return (
+    <nav className="header-nav">
+      {headerList}
+      {dropdownList}
     </nav>
   );
 };
