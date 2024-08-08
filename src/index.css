@@ -136,9 +136,8 @@ a {
 .home-page {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 10rem;
 }
 
 .home-page-header {
@@ -153,7 +152,7 @@ a {
 }
 
 .home-text {
-  margin-bottom: -20rem;
+  margin-top: -10rem;
 }
 
 .home-text > p {
