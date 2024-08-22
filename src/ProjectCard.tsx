@@ -26,7 +26,7 @@ const ProjectCard = ({
   const link =
     name === "Flashcards App"
       ? "https://trivia-game-opal-sigma.vercel.app/"
-      : `${URL}`;
+      : URL;
 
   return (
     <div className={`card ${className}`}>

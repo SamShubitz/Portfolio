@@ -46,7 +46,14 @@ const projectCards = cards.map((card) => {
   return (
     <li className="proj-item" key={card.name}>
       <div className="proj-text">
-        <a href={card.url} target="_blank">
+        <a
+          href={
+            card.url === "triviacards"
+              ? "https://trivia-game-opal-sigma.vercel.app/"
+              : card.url
+          }
+          target="_blank"
+        >
           <h1>{card.name}</h1>
         </a>
         <p>{card.description}</p>
