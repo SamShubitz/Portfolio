@@ -1,5 +1,4 @@
 import axios from "./assets/axios.svg";
-import CSS from "./assets/CSS.svg";
 import efcore from "./assets/efcore.png";
 import netcore from "./assets/netcore.svg";
 import reactquery from "./assets/reactquery.png";
