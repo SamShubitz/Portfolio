@@ -1,13 +1,15 @@
 import ProjectCard from "./ProjectCard";
 import lemon from "./assets/lemon.png";
 import caged from "./assets/Logo.jpeg";
-import flashcard from "./assets/Flashcard.jpeg";
+import trivia from "./assets/trivia.png";
 import typescript from "./assets/Typescript.svg";
 import javascript from "./assets/JS.svg";
 import css from "./assets/CSS.svg";
 import react from "./assets/React.svg";
 import netcore from "./assets/netcore.svg";
 import postgres from "./assets/postgresql.svg";
+import tailwind from "./assets/Tailwind.svg";
+import nextjs from "./assets/NextJs.svg";
 import useObserver from "./useObserver";
 
 const cards = [
@@ -21,13 +23,13 @@ const cards = [
     toolsUsed: [typescript, react, css, netcore, postgres],
   },
   {
-    name: "Trivia Cards App",
-    image: flashcard,
+    name: "Flashcards App",
+    image: trivia,
     description:
-      "A simple web app that makes use of an API to display trivia flash cards and also allows users to create their own.",
+      "A full-stack web app that allows users to create and save flashcard decks or play a simple trivia game.",
     url: "triviacards",
-    gitHubLink: "https://github.com/SamShubitz/TriviaCardsApp",
-    toolsUsed: [typescript, react, css],
+    gitHubLink: "https://github.com/SamShubitz/Flashcards-App",
+    toolsUsed: [typescript, react, nextjs, tailwind],
   },
   {
     name: "Little Lemon Restaurant",

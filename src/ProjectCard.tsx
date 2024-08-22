@@ -23,10 +23,15 @@ const ProjectCard = ({
     );
   });
 
+  const link =
+    name === "Flashcards App"
+      ? "https://trivia-game-opal-sigma.vercel.app/"
+      : `${URL}`;
+
   return (
     <div className={`card ${className}`}>
       <div className="card-header">
-        <a href={`/${URL}`} target="_blank">
+        <a href={link} target="_blank">
           <h1>{name}</h1>
           <img className="app-logo" src={image} alt="app-logo" />
         </a>
